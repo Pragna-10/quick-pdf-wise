@@ -74,7 +74,7 @@ export function BudgetTracker({ budgets, expenses, onAddBudget, onDeleteBudget }
                     </div>
                   </div>
                   <Progress value={pct} className={`h-2 ${over ? '[&>div]:bg-destructive' : '[&>div]:bg-primary'}`} />
-                  {over && <p className="text-xs text-destructive font-medium">⚠️ Over budget by ${(spent - budget.limit).toFixed(2)}</p>}
+                  {over && <p className="text-xs text-destructive font-medium">⚠️ Over budget by ₹{(spent - budget.limit).toFixed(2)}</p>}
                 </div>
               );
             })}

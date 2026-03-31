@@ -84,7 +84,7 @@ export function ExpenseList({ expenses, onDelete }: ExpenseListProps) {
                     </div>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="font-bold text-lg whitespace-nowrap">${expense.amount.toFixed(2)}</span>
+                    <span className="font-bold text-lg whitespace-nowrap">₹{expense.amount.toFixed(2)}</span>
                     <Button variant="ghost" size="icon" className="opacity-0 group-hover:opacity-100 transition-opacity text-destructive" onClick={() => onDelete(expense.id)}>
                       <Trash2 className="w-4 h-4" />
                     </Button>

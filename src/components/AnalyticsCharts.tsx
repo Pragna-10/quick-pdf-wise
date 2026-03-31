@@ -69,7 +69,7 @@ export function AnalyticsCharts({ expenses }: AnalyticsChartsProps) {
                     <div key={d.name} className="flex items-center gap-2 text-sm">
                       <div className="w-3 h-3 rounded-full flex-shrink-0" style={{ backgroundColor: d.color }} />
                       <span className="truncate">{d.icon} {d.name}</span>
-                      <span className="ml-auto font-medium">${d.value.toFixed(0)}</span>
+                      <span className="ml-auto font-medium">₹{d.value.toFixed(0)}</span>
                     </div>
                   ))}
                 </div>

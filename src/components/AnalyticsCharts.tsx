@@ -61,7 +61,7 @@ export function AnalyticsCharts({ expenses }: AnalyticsChartsProps) {
                     <Pie data={categoryData} cx="50%" cy="50%" innerRadius={55} outerRadius={90} paddingAngle={3} dataKey="value">
                       {categoryData.map((entry, i) => <Cell key={i} fill={entry.color} />)}
                     </Pie>
-                    <Tooltip formatter={(value: number) => `$${value.toFixed(2)}`} />
+<Tooltip formatter={(value: number) => `₹${value.toFixed(2)}`} />
                   </PieChart>
                 </ResponsiveContainer>
                 <div className="grid grid-cols-2 gap-2 w-full">
@@ -69,7 +69,7 @@ export function AnalyticsCharts({ expenses }: AnalyticsChartsProps) {
                     <div key={d.name} className="flex items-center gap-2 text-sm">
                       <div className="w-3 h-3 rounded-full flex-shrink-0" style={{ backgroundColor: d.color }} />
                       <span className="truncate">{d.icon} {d.name}</span>
-                      <span className="ml-auto font-medium">${d.value.toFixed(0)}</span>
+                      <span className="ml-auto font-medium">₹{d.value.toFixed(0)}</span>
                     </div>
                   ))}
                 </div>
@@ -90,7 +90,7 @@ export function AnalyticsCharts({ expenses }: AnalyticsChartsProps) {
                   <CartesianGrid strokeDasharray="3 3" className="stroke-border" />
                   <XAxis dataKey="month" className="text-xs" />
                   <YAxis className="text-xs" />
-                  <Tooltip formatter={(value: number) => `$${value.toFixed(2)}`} />
+                  <Tooltip formatter={(value: number) => `₹${value.toFixed(2)}`} />
                   <Bar dataKey="total" fill="hsl(160, 84%, 39%)" radius={[6, 6, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
@@ -111,7 +111,7 @@ export function AnalyticsCharts({ expenses }: AnalyticsChartsProps) {
                 <CartesianGrid strokeDasharray="3 3" className="stroke-border" />
                 <XAxis dataKey="day" className="text-xs" interval={4} />
                 <YAxis className="text-xs" />
-                <Tooltip formatter={(value: number) => `$${value.toFixed(2)}`} />
+                <Tooltip formatter={(value: number) => `₹${value.toFixed(2)}`} />
                 <Line type="monotone" dataKey="amount" stroke="hsl(200, 98%, 39%)" strokeWidth={2} dot={false} />
               </LineChart>
             </ResponsiveContainer>

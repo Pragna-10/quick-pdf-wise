@@ -67,14 +67,14 @@ export function BudgetTracker({ budgets, expenses, onAddBudget, onDeleteBudget }
                       <span className="font-medium text-sm">{cfg.label}</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <span className={`text-sm font-bold ${over ? 'text-destructive' : ''}`}>${spent.toFixed(0)} / ${budget.limit.toFixed(0)}</span>
+                      <span className={`text-sm font-bold ${over ? 'text-destructive' : ''}`}>₹{spent.toFixed(0)} / ₹{budget.limit.toFixed(0)}</span>
                       <Button variant="ghost" size="icon" className="h-7 w-7 text-muted-foreground hover:text-destructive" onClick={() => onDeleteBudget(budget.id)}>
                         <Trash2 className="w-3 h-3" />
                       </Button>
                     </div>
                   </div>
                   <Progress value={pct} className={`h-2 ${over ? '[&>div]:bg-destructive' : '[&>div]:bg-primary'}`} />
-                  {over && <p className="text-xs text-destructive font-medium">⚠️ Over budget by ${(spent - budget.limit).toFixed(2)}</p>}
+                  {over && <p className="text-xs text-destructive font-medium">⚠️ Over budget by ₹{(spent - budget.limit).toFixed(2)}</p>}
                 </div>
               );
             })}

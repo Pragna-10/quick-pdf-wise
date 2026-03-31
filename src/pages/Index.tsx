@@ -23,9 +23,9 @@ const Index = () => {
   const recurringCount = expenses.filter(e => e.isRecurring).length;
 
   const stats = [
-    { label: 'This Month', value: `$${totalThisMonth.toFixed(2)}`, icon: DollarSign, color: 'text-primary' },
-    { label: 'Total Spent', value: `$${totalAll.toFixed(2)}`, icon: TrendingUp, color: 'text-chart-4' },
-    { label: 'Avg/Day', value: `$${avgPerDay.toFixed(2)}`, icon: TrendingDown, color: 'text-accent' },
+    { label: 'This Month', value: `₹${totalThisMonth.toFixed(2)}`, icon: DollarSign, color: 'text-primary' },
+    { label: 'Total Spent', value: `₹${totalAll.toFixed(2)}`, icon: TrendingUp, color: 'text-chart-4' },
+    { label: 'Avg/Day', value: `₹${avgPerDay.toFixed(2)}`, icon: TrendingDown, color: 'text-accent' },
     { label: 'Recurring', value: `${recurringCount}`, icon: RotateCcw, color: 'text-chart-3' },
   ];
 

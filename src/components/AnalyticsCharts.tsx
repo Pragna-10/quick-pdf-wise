@@ -111,7 +111,7 @@ export function AnalyticsCharts({ expenses }: AnalyticsChartsProps) {
                 <CartesianGrid strokeDasharray="3 3" className="stroke-border" />
                 <XAxis dataKey="day" className="text-xs" interval={4} />
                 <YAxis className="text-xs" />
-                <Tooltip formatter={(value: number) => `$${value.toFixed(2)}`} />
+                <Tooltip formatter={(value: number) => `₹${value.toFixed(2)}`} />
                 <Line type="monotone" dataKey="amount" stroke="hsl(200, 98%, 39%)" strokeWidth={2} dot={false} />
               </LineChart>
             </ResponsiveContainer>

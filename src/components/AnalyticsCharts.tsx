@@ -61,7 +61,7 @@ export function AnalyticsCharts({ expenses }: AnalyticsChartsProps) {
                     <Pie data={categoryData} cx="50%" cy="50%" innerRadius={55} outerRadius={90} paddingAngle={3} dataKey="value">
                       {categoryData.map((entry, i) => <Cell key={i} fill={entry.color} />)}
                     </Pie>
-                    <Tooltip formatter={(value: number) => `$${value.toFixed(2)}`} />
+<Tooltip formatter={(value: number) => `₹${value.toFixed(2)}`} />
                   </PieChart>
                 </ResponsiveContainer>
                 <div className="grid grid-cols-2 gap-2 w-full">

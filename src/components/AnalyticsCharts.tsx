@@ -90,7 +90,7 @@ export function AnalyticsCharts({ expenses }: AnalyticsChartsProps) {
                   <CartesianGrid strokeDasharray="3 3" className="stroke-border" />
                   <XAxis dataKey="month" className="text-xs" />
                   <YAxis className="text-xs" />
-                  <Tooltip formatter={(value: number) => `$${value.toFixed(2)}`} />
+                  <Tooltip formatter={(value: number) => `₹${value.toFixed(2)}`} />
                   <Bar dataKey="total" fill="hsl(160, 84%, 39%)" radius={[6, 6, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
